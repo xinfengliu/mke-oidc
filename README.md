@@ -528,3 +528,10 @@ rm -r ~/.kube/cache/oidc-login
 - Scenarios with adding/removing users and groups
   - Wait 3 minutes for kubectl cache after a user is added to a MKE team
   - Wait 1 minute for kubectl cache after a user is removed from MKE team
+- SSO deployed in MKE. Be careful of circular dependencies
+
+```sh
+# SSO in the same cluster
+$ put_config.sh ucp-config.toml
+{"message":"unable to validate one or more configs: [\"invalid External Identity Provider config: INVALID_FORM_FIELD: An input form field is invalid - Detail: wellKnownConfigUrl - unable to fetch provider info from well known URI: HTTP error: Get \\\"https://keycloak.k8s.pac.dockerps.io/realms/pac.dockerps.io/.well-known/openid-configuration\\\": EOF\"]"}
+```
