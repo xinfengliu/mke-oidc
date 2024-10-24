@@ -104,7 +104,8 @@ Add the following to `mke-config.toml`
     clientId = "kubernetes"
     wellKnownConfigUrl = "https://keycloak.k8s.pac.dockerps.io/realms/pac.dockerps.io/.well-known/openid-configuration"
     caBundle = ""
-    usernameClaim = "sub"
+    #usernameClaim = "sub"
+    usernameClaim = "preferred_username"
     httpProxy = ""
     httpsProxy = ""
 
