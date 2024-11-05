@@ -207,6 +207,7 @@ contexts:
 clusters:
 - cluster:
     certificate-authority-data:  < get content from $(curl https://<mke url>/ca | base64) >
+    server: <mke url>:6443
   name: <mke url>
 users:
 - name: oidc
