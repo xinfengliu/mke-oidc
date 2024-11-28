@@ -46,6 +46,7 @@ $ kubectl -n keycloak get secrets keycloak -o jsonpath='{.data.admin-password}' 
 **Client scopes --> kubernetes-dedicated --> Configure a new mapper --> User Client Role**
 - Name: iam_roles (used by MKE)
 - Client ID: kubernetes
+- Token Claim Name: iam_roles
 - Multivalued: on
 - Claim JSON Type: String
 - Add to ID token : on
